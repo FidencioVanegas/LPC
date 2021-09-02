@@ -1,0 +1,27 @@
+#!/bin/bash
+#-------------------------funcion-------------------------#
+function crear(){
+	#-----------------------if------------------------#
+	if [ $num1 == $num2 ]
+	then
+	    echo "el numero: $num1 es igual a: $num2"
+	elif [ $num1 -gt $num2 ]
+	then
+	    echo "el numero: $num1 es mayor que: $num2"
+	elif [ $num1 -lt $num2 ]
+	then
+	    echo "el numero: $num1 es menor que: $num2"
+	else
+	    echo "no cumple nada"
+	fi
+}
+#-------------------------variable#------------------------#
+read -p "Escribe cuantas veces se va repetir: " rep
+#---------------------------for#---------------------------#
+for (( c=1; c<=rep; c++ ))
+do
+    read -p "Escribe un numero: " num1
+    read -p "Escribe otro numero: " num2
+    crear
+    echo ""
+done
