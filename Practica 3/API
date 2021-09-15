@@ -1,0 +1,20 @@
+#!/bin/bash
+#----------------------API_de_Github----------------------# 
+url="https://api.github.com/users/octocat"
+echo "----------------------1ra_consulta-----------------------"
+curl -s $url"/repos"| grep "url" | head -n 10
+echo "----------------------2da_consulta-----------------------"
+curl -s $url"/followers"	#Basada de la 1ra consulta
+echo "----------------------3ra_consulta-----------------------"
+curl -s $url"/subscriptions"	#Basada de la 1ra consulta
+
+#-------------------API_openweathermap--------------------#
+echo "----------------------4ta_consulta-----------------------"
+key="9c12201a1704c2dbeb6b10abc8b70bde"
+curl -s "api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=$key"
+echo -e "\n"
+#-----------------------freetogame------------------------#
+echo "----------------------5ta_consulta-----------------------"
+url="https://api.nasa.gov"
+curl -s $url"/DONKI/CMEAnalysis?startDate=2016-09-01&endDate=2016-09-30&mostAccurateOnly=true&speed=500&halfAngle=30&catalog=ALL&api_key=DEMO_KEY"
+echo -e "\n"
