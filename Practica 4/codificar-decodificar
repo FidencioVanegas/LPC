@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "codificar el hola_mundo"
+base64 hola_mundo.c > hola_mundo.txt
+
+echo "decodificar los archivos de texto como imagenens jpg"
+
+base64 -d mystery_img1.txt > imagen1.jpg
+base64 -d mystery_img2.txt > imagen2.jpg
