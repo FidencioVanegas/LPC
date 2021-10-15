@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "--------------------------IP local--------------------------"
+ip address
+echo "-------------------------IP publica-------------------------"
+curl ifconfig.me
+echo ""
+echo "----------------------------nmap----------------------------"
+echo "-----------------segmento de red privado--------------------"
+nmap -sP 192.168.100.84/24
+echo "--------------ip de su segmento  con un script--------------"
+nmap --script=http-auth-finder www.facebook.com
+echo "-------------------segmento de ip publica-------------------"
+nmap github.com
